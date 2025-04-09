@@ -1,0 +1,568 @@
+/* 스타일 초기화 */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-size: 100%;
+font-family: inherit;
+vertical-align: baseline;
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+a, a:visited {
+    color: #242424;
+}
+
+a:active {
+    color: #B39CCA;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: Pretendard, sans-serif;
+    background: #f8f8f8;
+}
+
+.wrap {
+    position: relative;
+}
+
+/* 헤더 영역 */
+header {
+    padding: 0 30px;
+    background: white;
+}
+
+header .top-nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+}
+
+header .top-nav-wrapper #left-nav h1 a {
+    text-align: left;
+}
+
+header .top-nav-wrapper #left-nav h1 i {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+header .top-nav-wrapper #left-nav h1 .dot {
+    width: 5px;
+    height: 5px;
+    background-color: #B39CCA;
+    border-radius: 100%;
+    display: inline-block;
+    align-items: start;
+    margin-bottom: 8px;
+}
+
+header .top-nav-wrapper #right-nav {
+    display: flex;
+    justify-content: end;
+}
+
+header .top-nav-wrapper #right-nav li {
+    padding: 8px;
+}
+
+header .title-wrapper {
+    padding: 30px;
+    text-align: center;
+}
+
+header .title-wrapper h2 {
+    font-size: 50px;
+}
+
+header .title-wrapper p {
+    padding: 8px 0;
+}
+
+
+
+
+
+/* 메인 메뉴 스타일 */
+#main-menu {
+    background-color: #242424;
+    z-index: 11;
+}
+
+#main-menu .main-menu-wrapper .sub_nav {
+    text-align: center;
+    align-items: center;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+    height: 52px;
+}
+
+#main-menu .main-menu-wrapper .sub_nav li {
+    border-right: .5px solid #717171;
+    width: 100%;
+}
+
+
+#main-menu .main-menu-wrapper .sub_nav li:last-child {
+    border-right: none;
+}
+
+#main-menu .main-menu-wrapper .sub_nav li a {
+    color: #717171;
+    white-space: nowrap;
+}
+
+#main-menu .main-menu-wrapper .sub_nav li a:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f2f2f2;
+    text-align: center;
+}
+
+input[type="checkbox" i] {
+    display: none;
+}
+
+/* v2 */
+.sub-menu {
+    display: none;
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sub-menu li a {
+    display: block;
+    padding: 10px 16px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.sub_nav input[type="checkbox"] {
+    display: none;
+}
+
+/* 라벨 기본 스타일 */
+.sub_nav label {
+    display: inline;
+    padding: 14px;
+    color: #ccc;
+    background-color: #242424;
+    cursor: pointer;
+    white-space: nowrap;
+    text-align: center;
+    user-select: none;
+}
+
+
+/* 콘텐츠 영역 */
+.content {
+    padding: 16px;
+}
+
+.content .row h2 {
+    font-size: 32px;
+}
+
+.content .row h5 {
+    font-size: 14px;
+    font-weight: 300;
+    color: #717171;
+}
+
+
+/* 좌측 행 */
+.left-column {
+    float: left;
+    width: 70%;
+}
+
+/* 우측 행 */
+.right-column {
+    float: left;
+    width: 30%;
+    background-color: #f8f8f8;
+    padding-left: 20px;
+}
+
+.right-column .card .calendar table {
+    margin-top: 8px;
+    width: 100%;
+}
+
+.right-column .card .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-column .card .top .month {
+    width: 16%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-column .card .calendar table,
+.right-column .card .calendar th,
+.right-column .card .calendar td {
+    border: 1px solid #242424;
+    border-collapse: collapse;
+}
+
+.right-column .card .calendar th,
+.right-column .card .calendar td {
+    padding: 8px;
+}
+
+
+.right-column .card .calendar tbody tr:nth-child(2) td:nth-child(4) span {
+    background-color: #B39CCA;
+    color: white;
+    padding: 4px 9px;
+    border-radius: 100%;
+}
+
+.right-column .card ol {
+    padding: 24px;
+}
+.right-column .card ol li {
+    margin-bottom: 8px;
+}
+
+.right-column .card .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-column .card .top .ico {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.video {
+    width: 100%;
+    padding: 20px;
+    height: 100px;
+}
+
+.video iframe {
+    width: 100%;
+    height: 315px;
+}
+
+.left-column .video {
+    height: auto;
+
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* 컬럼 뒤 플로트 지우기 */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 광고 팝업 */
+.add {
+    position: relative;
+    color: #f2f2f2;
+    background: #242424;
+    width: 300px;
+    height: 150px;
+    position: fixed;
+    bottom: 16px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    z-index: 99;
+}
+
+.add .close-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.add .inner {
+    padding-top: 25px;
+    text-align: center;
+}
+
+.add i {
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    text-shadow:
+    0 0 5px #B39CCA,
+    0 0 10px #B39CCA,
+    0 0 20px #B39CCA,
+    0 0 40px #B39CCA,
+    0 0 80px #B39CCA;
+}
+
+.add span {
+    margin-bottom: 8px;
+    display: block;
+}
+
+.add button {
+    display: inline-block;
+    margin-top: 16px;
+}
+
+.add .close-btn {
+    border: none;
+}
+
+button, .button {
+    cursor: pointer;
+    background-color: #B39CCA;
+    border-radius: 4px;
+    border: none;
+    width: 100%;
+    padding: 8px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.button-temporary {
+    cursor: pointer;
+    background-color: #dddddd;
+    border-radius: 4px;
+    border: none;
+    width: 100%;
+    padding: 8px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+fieldset legend {
+    padding: 8px 0;
+}
+
+form input {
+    margin-top: 8px;
+}
+
+textarea {
+    width: 100%;
+    height: 20vh;
+}
+
+/* 푸터 영역 */
+.footer {
+    padding: 20px 0 100px 0;
+    /* 상우하좌 */
+    text-align: center;
+    background: #242424;
+    margin-top: 20px;
+}
+
+/* footer */
+.footer {
+    height: 22.5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer .top {
+    height: 20%;
+
+    display: flex;
+    
+}
+
+.footer .top ul {
+    padding: 0;
+    margin: 0;
+    /*width: 60%;*/
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .top ul li {
+    border-right: 1px solid #fff;
+}
+
+.footer .top ul li:last-child {
+    border-right: none;
+}
+
+.footer .top ul li a {
+    padding: 0 16px;
+    flex-wrap: nowrap;
+    font-weight: 800;
+    color: #fff;
+}
+
+.footer .bot {
+    height: 80%;
+    padding-top: 8px;
+}
+
+.footer .bot > div {
+    color: #7a7a7a;
+    font-size: 12px;
+    padding-left: 8px;
+    margin-bottom: 3px;
+
+    display: flex;
+}
+
+.footer .bot > div:last-child {
+    text-align: center;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* v2 데스크탑 환경 */
+@media screen and (min-width: 801px) {
+    .sub_nav {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin: 0 auto;
+        padding: 0 24px;
+        height: 52px;
+        align-items: center;
+        list-style: none;
+    }
+
+    .sub_nav li {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        border-right: 0.5px solid #717171;
+    }
+
+    .sub_nav li:last-child {
+        border-right: none;
+    }
+
+    .sub_nav input[type="checkbox"] {
+        display: none;
+    }
+
+    .sub_nav label {
+        pointer-events: none; /* label 클릭 막기 */
+    }
+
+    .sub_nav li:hover > .sub-menu {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+}
+
+/* 반응형 레이아웃 - 태블릿PC환경 */
+/* 화면 너비가 800px보다 작아지면 두 개의 열이 옆이 아닌 위로 쌓입니다. */
+@media screen and (max-width: 800px) {
+    #main-menu .main-menu-wrapper .sub_nav {
+        text-align: center;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+
+        
+        flex-direction: column;
+        height: auto;
+    }
+
+    /* v2 */
+
+    .sub_nav label {
+        display: block;
+        padding: 16px 0;
+    }
+
+    .sub_nav li {
+        border-right: none;
+        width: 100%;
+        padding: 16px 0;
+
+    }
+
+    .sub_nav input:checked + label + .sub-menu {
+        display: block;
+        position: static;
+    }
+
+    .sub-menu {
+        position: static;
+        background-color: #2b2b2b;
+    }
+
+    /* /v2 */
+
+    .left-column, .right-column {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* 반응형 레이아웃 - 모바일환경 */
+/* 화면 너비가 400px보다 작아지면 네비게이션 링크들이 옆이 아닌 위로 쌓입니다. */
+@media screen and (max-width: 400px) {
+    header .top-nav-wrapper #right-nav li:not(:last-child)  {
+        display: none;
+    }
+    #main-menu .main-menu-wrapper .sub_nav {
+        display: block;
+        /*padding: 8px 0;*/
+        height: auto;
+    }
+
+    #main-menu .main-menu-wrapper .sub_nav li {
+        border-right: none;
+        width: 100%;
+        /*padding: 8px 0;*/
+    }
+
+}
